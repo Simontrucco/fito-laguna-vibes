@@ -313,7 +313,7 @@ function Index() {
                   className="mb-6 flex h-40 items-center justify-center rounded-[1.5rem]"
                   style={{ backgroundColor: f.color as string }}
                 >
-                  <Sun className="h-24 w-24 text-card" />
+                  <FishStyled variant={f.variant} className="h-28 w-40 drop-shadow-[4px_4px_0_var(--deep-sea)]" />
                 </div>
                 <h3 className="text-3xl text-secondary">{f.name}</h3>
                 <p className="mt-2 text-deep-sea/80">{f.note}</p>
