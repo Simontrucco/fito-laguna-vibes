@@ -186,6 +186,13 @@ const FishStyled = ({
           <path d="M20 72 q-8 2 -10 8" />
         </g>
       )}
+
+      {/* hat — same color as the fish body */}
+      <g stroke={palette.deep} strokeWidth="3" strokeLinejoin="round">
+        <ellipse cx="55" cy="40" rx="26" ry="4" fill={palette.body} />
+        <path d="M42 40 L42 18 Q42 12 48 12 L62 12 Q68 12 68 18 L68 40 Z" fill={palette.body} />
+        <path d="M42 30 L68 30" stroke={palette.accent} strokeWidth="3" />
+      </g>
     </svg>
   );
 };
