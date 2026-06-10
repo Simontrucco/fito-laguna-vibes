@@ -83,7 +83,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
           <div className="relative z-10">
             <span className="inline-block rounded-full border-2 border-deep-sea bg-card px-4 py-1 text-xs font-black uppercase tracking-[0.2em] text-deep-sea">
-              Cerveza Artesanal · 355ml
+              CERVEZA ARTESANAL
             </span>
             <h1 className="mt-6 font-display text-6xl leading-[0.95] md:text-8xl">
               <span className="block text-coral">Fito</span>
