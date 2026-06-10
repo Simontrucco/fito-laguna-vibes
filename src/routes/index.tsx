@@ -46,6 +46,151 @@ const Palm = ({ className = "" }: { className?: string }) => (
   </svg>
 );
 
+/**
+ * Fish logo that morphs to characterize a beer style.
+ * - golden: sunny, floral fish with petal-like fins
+ * - pale:   hoppy fish with citrus slice eye and hop-leaf tail
+ * - red:    caramel/red fish with warm stripes and a curled tail
+ */
+const FishStyled = ({
+  variant,
+  className = "",
+}: {
+  variant: "golden" | "pale" | "red";
+  className?: string;
+}) => {
+  const palette = {
+    golden: { body: "var(--sun)", accent: "var(--coral)", deep: "var(--deep-sea)" },
+    pale:   { body: "var(--coral)", accent: "var(--fish)", deep: "var(--deep-sea)" },
+    red:    { body: "oklch(0.55 0.17 30)", accent: "var(--sun)", deep: "var(--deep-sea)" },
+  }[variant];
+
+  return (
+    <svg viewBox="0 0 200 140" className={className} aria-hidden="true">
+      {/* tail */}
+      {variant === "red" ? (
+        <path d="M170 70 C195 40 200 60 195 70 C200 80 195 100 170 70 Z" fill={palette.body} stroke={palette.deep} strokeWidth="3" strokeLinejoin="round" />
+      ) : variant === "pale" ? (
+        <path d="M170 70 L200 45 L195 70 L200 95 Z" fill={palette.accent} stroke={palette.deep} strokeWidth="3" strokeLinejoin="round" />
+      ) : (
+        <g stroke={palette.deep} strokeWidth="3" strokeLinejoin="round">
+          <path d="M170 70 L198 50 L192 70 L198 90 Z" fill={palette.body} />
+          <circle cx="195" cy="50" r="4" fill={palette.accent} />
+          <circle cx="195" cy="90" r="4" fill={palette.accent} />
+        </g>
+      )}
+
+      {/* body */}
+      <path
+        d="M30 70 C50 30 130 30 170 70 C130 110 50 110 30 70 Z"
+        fill={palette.body}
+        stroke={palette.deep}
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+
+      {/* style-specific body decorations */}
+      {variant === "golden" && (
+        <g stroke={palette.deep} strokeWidth="2" fill={palette.accent}>
+          {/* floral petals along the back */}
+          <circle cx="80" cy="48" r="6" />
+          <circle cx="105" cy="42" r="6" />
+          <circle cx="130" cy="48" r="6" />
+          <circle cx="80" cy="48" r="2" fill={palette.deep} />
+          <circle cx="105" cy="42" r="2" fill={palette.deep} />
+          <circle cx="130" cy="48" r="2" fill={palette.deep} />
+        </g>
+      )}
+      {variant === "pale" && (
+        <g fill="none" stroke={palette.deep} strokeWidth="2" strokeLinecap="round">
+          {/* hop cone scales */}
+          <path d="M70 60 q6 -8 12 0" />
+          <path d="M88 56 q6 -8 12 0" />
+          <path d="M106 56 q6 -8 12 0" />
+          <path d="M124 60 q6 -8 12 0" />
+          <path d="M70 80 q6 8 12 0" />
+          <path d="M88 84 q6 8 12 0" />
+          <path d="M106 84 q6 8 12 0" />
+          <path d="M124 80 q6 8 12 0" />
+        </g>
+      )}
+      {variant === "red" && (
+        <g fill="none" stroke={palette.deep} strokeWidth="2.5" strokeLinecap="round" opacity="0.55">
+          {/* caramel stripes */}
+          <path d="M70 55 q4 15 0 30" />
+          <path d="M95 50 q4 20 0 40" />
+          <path d="M120 52 q4 18 0 36" />
+        </g>
+      )}
+
+      {/* top fin */}
+      <path
+        d={
+          variant === "golden"
+            ? "M85 38 Q105 18 130 38 Q120 30 110 36 Q100 28 95 36 Z"
+            : variant === "pale"
+            ? "M90 38 L100 18 L108 32 L118 20 L125 38 Z"
+            : "M90 40 Q110 22 130 40 Z"
+        }
+        fill={palette.accent}
+        stroke={palette.deep}
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+
+      {/* bottom fin */}
+      <path
+        d="M85 100 Q105 118 130 100 Z"
+        fill={palette.accent}
+        stroke={palette.deep}
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+
+      {/* eye */}
+      {variant === "pale" ? (
+        <g>
+          {/* citrus slice eye */}
+          <circle cx="55" cy="65" r="9" fill="#fff8e0" stroke={palette.deep} strokeWidth="2" />
+          <g stroke={palette.deep} strokeWidth="1.5">
+            <line x1="55" y1="56" x2="55" y2="74" />
+            <line x1="46" y1="65" x2="64" y2="65" />
+            <line x1="49" y1="59" x2="61" y2="71" />
+            <line x1="61" y1="59" x2="49" y2="71" />
+          </g>
+        </g>
+      ) : (
+        <>
+          <circle cx="55" cy="65" r="8" fill="#fff" stroke={palette.deep} strokeWidth="2" />
+          <circle cx="55" cy="65" r="3.5" fill={palette.deep} />
+        </>
+      )}
+
+      {/* gill */}
+      <path d="M72 60 Q66 70 72 82" fill="none" stroke={palette.deep} strokeWidth="2" strokeLinecap="round" />
+
+      {/* mouth: bubbles for golden (floral aroma), hop leaf for pale, foam swirl for red */}
+      {variant === "golden" && (
+        <g fill={palette.accent} stroke={palette.deep} strokeWidth="1.5">
+          <circle cx="22" cy="60" r="3" />
+          <circle cx="14" cy="52" r="2" />
+          <circle cx="18" cy="70" r="2.5" />
+        </g>
+      )}
+      {variant === "pale" && (
+        <path d="M30 70 q-10 -4 -14 -12 q8 2 14 8 q-2 -8 4 -14 q4 8 0 16 q8 -2 14 0 q-8 4 -18 6 Z" fill={palette.body} stroke={palette.deep} strokeWidth="2" strokeLinejoin="round" />
+      )}
+      {variant === "red" && (
+        <g fill="none" stroke={palette.deep} strokeWidth="2" strokeLinecap="round">
+          <path d="M22 62 q-6 -2 -8 -8" />
+          <path d="M20 72 q-8 2 -10 8" />
+        </g>
+      )}
+    </svg>
+  );
+};
+
+
 function Index() {
   const flavors = [
     { name: "Golden Ale", note: "Fuertes notas florales y frutales", abv: "4.2%", color: "var(--sun)" },
