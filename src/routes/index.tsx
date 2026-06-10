@@ -4,7 +4,7 @@ import canImg from "@/assets/fito-can.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fito Laguna — Cerveza Artesanal" },
+      { title: "¡Picó una Fito! — Cerveza Artesanal" },
       { name: "description", content: "Cerveza artesanal fresca y veraniega. Lager ligera, cítrica y refrescante." },
     ],
   }),
@@ -59,8 +59,8 @@ function Index() {
       <header className="relative z-20">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
           <a href="#" className="flex items-center gap-2 font-display text-2xl text-secondary">
-            <span className="text-coral">Fito</span>
-            <span>Laguna</span>
+            <span className="text-coral">¡Picó </span>
+            <span>una Fito!</span>
           </a>
           <ul className="hidden gap-8 text-sm font-bold uppercase tracking-wide text-deep-sea md:flex">
             <li><a href="#historia" className="hover:text-coral">Historia</a></li>
@@ -86,8 +86,8 @@ function Index() {
               CERVEZA ARTESANAL
             </span>
             <h1 className="mt-6 font-display text-6xl leading-[0.95] md:text-8xl">
-              <span className="block text-coral">Fito</span>
-              <span className="block text-secondary">Laguna</span>
+              <span className="block text-coral">¡Picó </span>
+              <span className="block text-secondary">una Fito!</span>
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-deep-sea">
               El verano embotellado. Una lager artesanal ligera, cítrica y refrescante,
@@ -211,7 +211,7 @@ function Index() {
       <footer className="bg-deep-sea px-6 py-12 text-card/80">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
           <div className="font-display text-2xl text-card">
-            <span className="text-coral">Fito</span> Laguna
+            <span className="text-coral">¡Picó </span> una Fito!
           </div>
           <p className="text-sm">Disfruta con moderación · +18 · © {new Date().getFullYear()}</p>
           <div className="flex gap-4 text-sm font-bold uppercase tracking-wider">
