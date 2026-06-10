@@ -48,9 +48,9 @@ const Palm = ({ className = "" }: { className?: string }) => (
 
 function Index() {
   const flavors = [
-    { name: "Laguna Lager", note: "Fresca, dorada, fácil de tomar.", abv: "4.8%", color: "var(--sun)" },
-    { name: "Coral Pale Ale", note: "Cítrica, con lúpulo tropical.", abv: "5.2%", color: "var(--coral)" },
-    { name: "Fito Wit", note: "Trigo, naranja y cilantro.", abv: "4.5%", color: "var(--lagoon)" },
+    { name: "Golden Ale", note: "Fuertes notas florales y frutales", abv: "4.2%", color: "var(--sun)" },
+    { name: "Pale Ale", note: "Aromas cítricos y frutales con un moderado amargor y un final seco", abv: "5.0%", color: "var(--coral)" },
+    { name: "Irish Red", note: "Color rojizo y notas a caramelo con el mas suave y limpio final", abv: "4.5%", color: "var(--lagoon)" },
   ];
 
   return (
