@@ -115,7 +115,7 @@ function Index() {
             <div className="absolute inset-0 -translate-x-6 translate-y-6 rounded-[3rem] bg-secondary/30" />
             <img
               src={canImg}
-              alt="Lata de Fito Laguna cerveza artesanal"
+              alt="Lata de ¡Picó una Fito! cerveza artesanal"
               width={1024}
               height={1024}
               className="relative animate-bob rounded-[3rem]"
@@ -194,7 +194,7 @@ function Index() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg">
             Encuéntranos en bares, almacenes y tiendas seleccionadas. O escríbenos para llevar
-            Fito Laguna a tu próxima reunión.
+            ¡Picó una Fito! a tu próxima reunión.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a href="mailto:hola@fitolaguna.com" className="rounded-full bg-card px-8 py-4 font-black uppercase tracking-wider text-deep-sea shadow-[6px_6px_0_var(--deep-sea)] transition hover:translate-y-[3px] hover:shadow-[3px_3px_0_var(--deep-sea)]">
