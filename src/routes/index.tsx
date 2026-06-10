@@ -4,7 +4,7 @@ import canImg from "@/assets/fito-can.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "¡Picó una Fito! — Cerveza Artesanal" },
+      { title: "Fito Laguna — Cerveza Artesanal" },
       { name: "description", content: "Cerveza artesanal fresca y veraniega. Lager ligera, cítrica y refrescante." },
     ],
   }),
@@ -59,8 +59,8 @@ function Index() {
       <header className="relative z-20">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
           <a href="#" className="flex items-center gap-2 font-display text-2xl text-secondary">
-            <span className="text-coral">¡Picó </span>
-            <span>una Fito!</span>
+            <span className="text-coral">Fito</span>
+            <span>Laguna</span>
           </a>
           <ul className="hidden gap-8 text-sm font-bold uppercase tracking-wide text-deep-sea md:flex">
             <li><a href="#historia" className="hover:text-coral">Historia</a></li>
@@ -86,8 +86,8 @@ function Index() {
               CERVEZA ARTESANAL
             </span>
             <h1 className="mt-6 font-display text-6xl leading-[0.95] md:text-8xl">
-              <span className="block text-coral">¡Picó </span>
-              <span className="block text-secondary">una Fito!</span>
+              <span className="block text-coral">Fito</span>
+              <span className="block text-secondary">Laguna</span>
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-deep-sea">
               El verano embotellado. Una lager artesanal ligera, cítrica y refrescante,
@@ -115,7 +115,7 @@ function Index() {
             <div className="absolute inset-0 -translate-x-6 translate-y-6 rounded-[3rem] bg-secondary/30" />
             <img
               src={canImg}
-              alt="Lata de ¡Picó una Fito! cerveza artesanal"
+              alt="Lata de Fito Laguna cerveza artesanal"
               width={1024}
               height={1024}
               className="relative animate-bob rounded-[3rem]"
@@ -194,7 +194,7 @@ function Index() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg">
             Encuéntranos en bares, almacenes y tiendas seleccionadas. O escríbenos para llevar
-            ¡Picó una Fito! a tu próxima reunión.
+            Fito Laguna a tu próxima reunión.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a href="mailto:hola@fitolaguna.com" className="rounded-full bg-card px-8 py-4 font-black uppercase tracking-wider text-deep-sea shadow-[6px_6px_0_var(--deep-sea)] transition hover:translate-y-[3px] hover:shadow-[3px_3px_0_var(--deep-sea)]">
@@ -211,7 +211,7 @@ function Index() {
       <footer className="bg-deep-sea px-6 py-12 text-card/80">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
           <div className="font-display text-2xl text-card">
-            <span className="text-coral">¡Picó </span> una Fito!
+            <span className="text-coral">Fito</span> Laguna
           </div>
           <p className="text-sm">Disfruta con moderación · +18 · © {new Date().getFullYear()}</p>
           <div className="flex gap-4 text-sm font-bold uppercase tracking-wider">
