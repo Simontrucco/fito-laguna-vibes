@@ -193,9 +193,9 @@ const FishStyled = ({
 
 function Index() {
   const flavors = [
-    { name: "Golden Ale", note: "Fuertes notas florales y frutales", abv: "4.2%", color: "var(--sun)" },
-    { name: "Pale Ale", note: "Aromas cítricos y frutales con un moderado amargor y un final seco", abv: "5.0%", color: "var(--coral)" },
-    { name: "Irish Red", note: "Color rojizo y notas a caramelo con el mas suave y limpio final", abv: "4.5%", color: "var(--lagoon)" },
+    { name: "Golden Ale", note: "Fuertes notas florales y frutales", abv: "4.2%", color: "var(--lagoon)", variant: "golden" as const },
+    { name: "Pale Ale", note: "Aromas cítricos y frutales con un moderado amargor y un final seco", abv: "5.0%", color: "var(--fish)", variant: "pale" as const },
+    { name: "Irish Red", note: "Color rojizo y notas a caramelo con el mas suave y limpio final", abv: "4.5%", color: "var(--deep-sea)", variant: "red" as const },
   ];
 
   return (
