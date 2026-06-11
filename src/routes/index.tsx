@@ -319,8 +319,8 @@ function Index() {
                 className="group relative rounded-[2rem] border-2 border-deep-sea bg-card p-8 shadow-[8px_8px_0_var(--deep-sea)] transition hover:-translate-y-2"
                 style={{ rotate: `${(i - 1) * 1.5}deg` }}
               >
-                <div className="mb-6 flex h-56 items-center justify-center overflow-hidden rounded-[1.5rem]" style={{ backgroundColor: f.color }}>
-                  <img src={f.img} alt={`Lata Fito Laguna ${f.name}`} className="h-full w-auto object-contain drop-shadow-[4px_4px_0_var(--deep-sea)]" />
+                <div className="mb-6 flex h-56 items-center justify-center">
+                  <img src={f.img} alt={`Lata Fito Laguna ${f.name}`} className="h-full w-auto object-contain drop-shadow-[4px_6px_0_var(--deep-sea)]" />
                 </div>
                 <h3 className="text-3xl text-secondary">{f.name}</h3>
                 <p className="mt-2 text-deep-sea/80">{f.note}</p>
