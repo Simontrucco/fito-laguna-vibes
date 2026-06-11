@@ -204,8 +204,8 @@ const FishStyled = ({
 function Index() {
   const flavors = [
     { name: "Golden Ale", note: "Fuertes notas florales y frutales", abv: "4.2%", color: "var(--lagoon)", variant: "golden" as const, img: canGolden },
-    { name: "Pale Ale", note: "Aromas cítricos y frutales con un moderado amargor y un final seco", abv: "5.0%", color: "var(--lagoon)", variant: "pale" as const, img: canPale },
-    { name: "Irish Red", note: "Color rojizo y notas a caramelo con el mas suave y limpio final", abv: "4.5%", color: "var(--lagoon)", variant: "red" as const, img: canRed },
+    { name: "Irish Red", note: "Color rojizo y notas a caramelo con el mas suave y limpio final", abv: "4.5%", color: "oklch(0.62 0.16 28)", variant: "red" as const, img: canRed },
+    { name: "Pale Ale", note: "Aromas cítricos y frutales con un moderado amargor y un final seco", abv: "5.0%", color: "var(--fish)", variant: "pale" as const, img: canPale },
   ];
 
   return (
@@ -319,7 +319,7 @@ function Index() {
                 className="group relative rounded-[2rem] border-2 border-deep-sea bg-card p-8 shadow-[8px_8px_0_var(--deep-sea)] transition hover:-translate-y-2"
                 style={{ rotate: `${(i - 1) * 1.5}deg` }}
               >
-                <div className="mb-6 flex h-56 items-center justify-center overflow-hidden rounded-[1.5rem] bg-card">
+                <div className="mb-6 flex h-56 items-center justify-center overflow-hidden rounded-[1.5rem]" style={{ backgroundColor: f.color }}>
                   <img src={f.img} alt={`Lata Fito Laguna ${f.name}`} className="h-full w-auto object-contain drop-shadow-[4px_4px_0_var(--deep-sea)]" />
                 </div>
                 <h3 className="text-3xl text-secondary">{f.name}</h3>
