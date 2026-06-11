@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import canImg from "@/assets/fito-can.png";
+import canGolden from "@/assets/can-golden.png";
+import canPale from "@/assets/can-pale.png";
+import canRed from "@/assets/can-red.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
