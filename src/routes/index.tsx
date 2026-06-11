@@ -204,8 +204,8 @@ const FishStyled = ({
 function Index() {
   const flavors = [
     { name: "Golden Ale", note: "Fuertes notas florales y frutales", abv: "4.2%", color: "var(--lagoon)", variant: "golden" as const, img: canGolden },
-    { name: "Pale Ale", note: "Aromas cítricos y frutales con un moderado amargor y un final seco", abv: "5.0%", color: "var(--lagoon)", variant: "pale" as const, img: canPale },
-    { name: "Irish Red", note: "Color rojizo y notas a caramelo con el mas suave y limpio final", abv: "4.5%", color: "var(--lagoon)", variant: "red" as const, img: canRed },
+    { name: "Irish Red", note: "Color rojizo y notas a caramelo con el mas suave y limpio final", abv: "4.5%", color: "oklch(0.62 0.16 28)", variant: "red" as const, img: canRed },
+    { name: "Pale Ale", note: "Aromas cítricos y frutales con un moderado amargor y un final seco", abv: "5.0%", color: "var(--fish)", variant: "pale" as const, img: canPale },
   ];
 
   return (
