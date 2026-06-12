@@ -1,11 +1,10 @@
 {
-     "framework": "vite",
-     "buildCommand": "bun run build",
-     "outputDirectory": ".output",
-     "installCommand": "bun install",
-     "build": {
-       "env": {
-         "NITRO_PRESET": "vercel-edge"
-       }
-     }
-   }
+  "framework": "vite",
+  "buildCommand": "bun run build",
+  "outputDirectory": "dist/client",
+  "cleanUrls": true,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
