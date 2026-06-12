@@ -367,8 +367,7 @@ function Index() {
           </div>
           <p className="text-sm">Disfruta con moderación · +18 · © {new Date().getFullYear()}</p>
           <div className="flex gap-4 text-sm font-bold uppercase tracking-wider">
-            <a href="#" className="hover:text-sun">Instagram</a>
-            <a href="#" className="hover:text-sun">TikTok</a>
+            <a href="https://www.instagram.com/fitolaguna/" target="_blank" rel="noopener noreferrer" className="hover:text-sun">Instagram</a>
           </div>
         </div>
       </footer>
