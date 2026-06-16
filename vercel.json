@@ -1,21 +1,4 @@
 {
-  "version": 2,
-  "framework": null,
   "buildCommand": "bun run build",
-  "outputDirectory": ".output",
-  "build": {
-    "env": {
-      "NITRO_PRESET": "vercel"
-    }
-  },
-  "routes": [
-    {
-      "src": "/_nitro/(.*)",
-      "dest": "/_nitro/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/.output/server/index.mjs"
-    }
-  ]
+  "outputDirectory": "dist"
 }
