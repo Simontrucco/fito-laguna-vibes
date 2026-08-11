@@ -445,11 +445,12 @@ style={{ rotate: `${(i - 1) * 1.5}deg` }}
 
 >
 
-<div className="mb-6 flex h-56 items-center justify-center transition-transform duration-300 group-hover:scale-105">
+<div className="mb-6 flex h-72 items-center justify-center transition-transform duration-300 group-hover:scale-105">
 
-<img src={f.img} alt={`Lata Fito Laguna ${f.name}`} className="h-full w-auto object-contain drop-shadow-[4px_6px_0_var(--deep-sea)]" />
+<img src={f.img} alt={`Lata Fito Laguna ${f.name}`} loading="lazy" className="h-full w-auto object-contain drop-shadow-[6px_10px_14px_rgba(0,0,0,0.28)]" />
 
 </div>
+
 
 <h3 className="text-3xl text-secondary">{f.name}</h3>
 
